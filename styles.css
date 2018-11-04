@@ -1,13 +1,25 @@
 body {
   font-family: Acme;
+  background-color: azure;
+}
+
+.header {
+  background-color: rgb(76, 225, 98)
 }
 
 .btn {
-  font-family: Bitter;
+  font-family: Anton;
+  margin-right: 5px;
+  text-transform: uppercase;
+  color: black;
 }
 
 .body-container {
   display: flex;
   flex-direction: column;
   align-items: center; 
+}
+
+.stats {
+  font-size: 22px;
 }
