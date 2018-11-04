@@ -6,18 +6,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Acme|Bitter" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <title>Document</title>
+  <title>Slap Game</title>
 </head>
 
 <body>
+  <div class="container body-container">
+    <!--Header-->
+    <h1> Zombie Attack</h1>
+    <h3>Can you survive the zombie attack?</h3>
 
-  <img src="//placehold.it/200x200">
-  <button onClick="slap(health)">Slap</button>
-  <span>Health:<span id="health">--</span></span>
+    <!--Buttons-->
+    <div class="row mt-5 mb-2" id="mainImg">
+      <img src="assets/zombie-warning.png">
+    </div>
+    <div class="row first-btn">
+      <button type="button" class="btn btn-success" onClick="baseballBat()">Baseball Bat</button>
+      <button type="button" class="btn btn-success" onClick="axe()">Axe</button>
+      <button type="button" class="btn btn-success" onClick="shotgun()">Shotgun</button>
+    </div>
+    <!--Identifiers-->
+    <div class="row mt-2 mb-2">
+      <div class="col-sm-12"><span>Opponent:<span id="name"> Zombie</span></span></div>
+      <div class="col-sm-12"><span>Health:<span id="health"> </span></span></div>
+      <div class="col-sm-12"><span>Hits:<span id="hitId"> </span></span></div>
 
+    </div>
+    <!--Defense Buttons-->
+    <div class="row second-btn">
+      <button type="button" class="btn btn-danger" id="shovelBtn" onclick="ateFinger()">Ate a finger</button>
+      <button type="button" class="btn btn-danger" id="axeBtn" onclick="ateArm()">Ate an arm</button>
+      <button type="button" class="btn btn-danger" id="shotgunBtn" onclick="ateLeg()">Ate a leg</button>
+    </div>
+    <!--Reset Button-->
+    <div class="row">
+      <button type="button" class="btn btn-default" onClick="reset()">Reset</button>
+    </div>
+  </div>
 
-  <script src="script.js"></script>
+  <script src="scriptrefactor.js"></script>
 </body>
 
 </html>
