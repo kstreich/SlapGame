@@ -45,40 +45,40 @@ function update() {
 function reset() {
   creatureOne.health = 100
   creatureOne.hits = 0
+  update()
   document.getElementById("mainImg").innerHTML = `<img src="assets/zombie-head.png"></img>`
+
+}
+function resetWhenHealthIsZero() {
+  if (creatureOne.health <= 0) {
+    creatureOne.health = 0
+    creatureOne.hits = 0
+    document.getElementById("mainImg").innerHTML = `<img src="assets/zombie-ko.png">`
+  }
   update()
 }
 
-function resetWhenHealthIsZero() {
-  if (creatureOne.health <= 0) {
-    creatureOne.health = 100
-    creatureOne.hits = 0
-  }
-  document.getElementById("mainImg").innerHTML = `<img src="assets/zombie-head.png"></img>`
-  update()
-}
 
 function baseballBat() {
   creatureOne.health -= 1
   creatureOne.hits++
+  document.getElementById("mainImg").innerHTML = `<img src="assets/pow-zombie.png"></img>`
   resetWhenHealthIsZero()
   update()
-  document.getElementById("mainImg").innerHTML = `<img src="assets/pow-zombie.png"></img>`
 }
 function axe() {
   creatureOne.health -= 5
   creatureOne.hits++
+  document.getElementById("mainImg").innerHTML = `<img src="assets/wham-zombie.png"></img>`
   resetWhenHealthIsZero()
   update()
-  document.getElementById("mainImg").innerHTML = `<img src="assets/wham-zombie.png"></img>`
 }
-
 function shotgun() {
   creatureOne.health -= 10
   creatureOne.hits++
+  document.getElementById("mainImg").innerHTML = `<img src="assets/bam-zombie.png"></img>`
   resetWhenHealthIsZero()
   update()
-  document.getElementById("mainImg").innerHTML = `<img src="assets/bam-zombie.png"></img>`
 }
 
 function ateFinger() {
@@ -124,10 +124,4 @@ function ateLeg() {
   document.getElementById("mainImg").innerHTML = `<img src="assets/zombie-like-face.png"></img>`
 
   update()
-}
-
-
-var mods = 0
-function addMods() {
-
 }
